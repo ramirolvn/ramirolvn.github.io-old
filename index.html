@@ -3,13 +3,31 @@
 
 <head>
 
-    <!-- <meta charset="utf-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content=""> -->
+    <meta name="description" content="Conheça um pouco mais sobre o desenvolvedor Ramiro Lima">
+    <meta name="author" content="Ramiro Lima">
 
-    <title>Conheça o Ramiro</title>
+    <title> Conheça meu trabalho</title>
+    <script> var repeat=1 // 0 para rolar uma vez, 1 para rolar infinitamente
+        var title=document.title
+        var leng=title.length
+        var start=1
+        function titlemove() {
+            titl=title.substring(start, leng) + title.substring(0, start)
+            document.title=titl
+            start++
+            if (start==leng+1) {
+                start=0
+                if (repeat==0)
+                    return
+            }
+            setTimeout("titlemove()",200)  // aqui vc pode aumentar ou diminuir a velocidade 
+        }
+        if (document.title)
+            // titlemove()
+    </script>
 
     <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -117,9 +135,10 @@
                         <img src="img/portfolio/FastMap.png" class="img-responsive" alt="">
                     </a>
                 </div>
-                <div class="col-sm-2">
+                <div class="col-lg-12">
+                <div class="col-lg-2">
                 </div>
-                <div class="col-sm-4 portfolio-item">
+                <div class="col-sm-4 portfolio-item" style="padding-left: 20px">
                     <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
@@ -139,15 +158,6 @@
                         <img src="img/portfolio/iWhey.png" class="img-responsive" alt="">
                     </a>
                 </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/ubna.png" class="img-responsive" alt="">
-                    </a>
                 </div>
             </div>
         </div>
@@ -164,7 +174,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-6 col-lg-offset-3 text-center">
-                    <p>Ramiro Lima, 23, desenvolvedor. Graduando em Engenharia da Computação pelo Instituto Federal de Ciência e Tecnologia do Ceará(IFCE) já foi bolsista  CNPQ onde trabalhou no laboratório LAPADA, estagiário do Brazilian Education Program for iOS Development(BEPiD) e da Deway Sistemas e Soluções.</p>
+                    <p>Ramiro Lima, 23, desenvolvedor. Graduando em Engenharia da Computação pelo Instituto Federal de Ciência e Tecnologia do Ceará(IFCE), já foi bolsista  CNPQ onde trabalhou no laboratório LAPADA, estagiário do Brazilian Education Program for iOS Development(BEPiD) e da Deway Sistemas e Soluções.</p>
                 </div>
                 <div class="col-lg-4 col-md-offset-4">
                     <ul class="list-group" style="color: black">
@@ -177,6 +187,10 @@
                         <li class="list-group-item">
                             <span class="badge">90%</span>
                             C
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge">70%</span>
+                            Inglês
                         </li>
                         <li class="list-group-item">
                             <span class="badge">60%</span>
@@ -277,25 +291,30 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Project Title</h2>
+                            <h2>WorkApp - Fitness</h2>
                             <hr class="star-primary">
-                            <img src="img/portfolio/cabin.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            <img src="img/portfolio/workApp.png" class="img-responsive img-centered" alt="">
+                            <p>WorkApp - Fitness é um app que busca ajudar seus usuários na academia, guiando-os na execução dos exercícios, sendo um tutorial com descrição e vídeo mostrando cada exercício, tendo-se a opção de criar sua ficha de treino no aplicativo, facilitando o controle e divisão do mesmo.
+                            <br>
+                            </br>
+                            <br>
+                            Desenvolvedores: Davi Freire, Ramiro Lima e Roberto Carneiro.
+                            </br>
+                            Designers: Frederico Monteiro e Mirela Holanda.
+                            <br>
+                            Personal: Raoni Silveira Carneiro.
+                            </br>
+                            Modelos: Beatriz Gadelha e Roberto Teixeira.
+                            <br>
+                            Academia: Treinart.
+                            </br>
+                            </p>
+                            <div>
+                            <button onclick="window.open('https://itunes.apple.com/br/app/id967021057');" type="button" class="btn btn-success">Baixar</button>
+                            </div>
+                            <div style="padding-top: 10px">
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Fechar</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -314,25 +333,23 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Project Title</h2>
+                            <h2>Fast Map - Encontre locais abertos agora</h2>
                             <hr class="star-primary">
-                            <img src="img/portfolio/cake.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            <img src="img/portfolio/FastMap.png" class="img-responsive img-centered" alt="">
+                            <p>Você tem vida noturna ativa? Você já tentou achar algum local aberto e não encontrou? Viajou e não conhece as redondezas? Pois o nosso aplicativo foi feito para você. Fast Map é um aplicativo que procura, de forma rápida e prática, locais populares como Farmácias, Postos de gasolina e Restaurantes abertos no momento, com a possibilidade de adicionar categorias e personalizar os seus favoritos para uma pesquisa rápida, além disso Fast Map indica a rota e o telefone do local, facilitando a sua vida para que você possa chegar rápido no local e/ou fazer ligações para o mesmo, também com o Fast Map é possível compartilhar as informações dos locais com seus amigos via WhatsApp ou por SMS.
+                            <br>
+                            </br>
+                            <br>
+                            Desenvolvedores: Adolfho Beserra, Ramiro Lima e Aron Uchôa.
+                            </br>
+                            Designers: Frederico Monteiro.
+                            </p>
+                            <div>
+                            <button onclick="window.open('https://itunes.apple.com/pt/app/fast-map-encontre-locais-abertos/id1000813900?mt=8');" type="button" class="btn btn-success">Baixar</button>
+                            </div>
+                            <div style="padding-top: 10px">
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Fechar</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -351,25 +368,32 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Project Title</h2>
+                            <h2>Fast Map - Encontre locais abertos agora</h2>
                             <hr class="star-primary">
-                            <img src="img/portfolio/circus.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            <img src="img/portfolio/ProjetoVerde.png" class="img-responsive img-centered" alt="">
+                            <p>Projeto Verde - Conectando homens e árvores!
+                            Adicione ávores no seu mapa local e submeta a sua publicação para ser avaliada por um administrador quando quiser! Compartilhe árvores com amantes da natureza, aprenda novas espécies e jogue um quiz super divertido que possibilita o aprendizado e compartilhar com amigos do facebook sua pontuação! Nosso app também permite que você denuncie crimes ambientais! 
+                            Projeto Verde é um app desenvolvido com a intenção de:
+                            1. Possibilitar o mapeamento de espécies arbóreas, com o intuito de mostrar aos usuários onde encontrar as espécies de árvores nativas e exóticas, para que esse possa visitar e conhecer melhor essa espécie.
+                            2. Informar os usuários sobre espécies arbóreas com fotos a descrições de seus elementos para melhor identificação, como a árvore em si, tronco, folha, fruto, flor e semente.
+                            3. Melhorar o aprendizado para quem tem pouco conhecimento em árvores e seus nomes. Com essa proposta, disponibilizamos um quiz onde o usuário poderá testar seus conhecimentos e assim aprender sobre árvores da melhor forma que existe: brincando. Possibilitamos também o compartilhamento dessa pontuação obtida com os amigos no facebook.
+                            4. Pretendemos com esse aplicativo levar o conhecimento ao público e proteger nossas árvores, com isso disponibilizamos um setor de denúncia, onde o usuário poderá nos alertar sobre problemas que possam estar acontecendo.
+                            5. Toda contribuição é bem-vinda, para entrar em contato com a equipe você pode utilizar a nossa página no facebook:
+                            https://www.facebook.com/Projeto-Verde-1641087776109289/
+                            Baixe agora!
+                            <br>
+                            </br>
+                            <br>
+                            Desenvolvedores: Ramiro Lima, Pedro Vitor e Roberto Carneiro.
+                            </br>
+                            Designers: Karina Paula.
+                            </p>
+                            <div>
+                            <button onclick="window.open('https://itunes.apple.com/br/app/projeto-verde/id1042399028?l=en&mt=8');" type="button" class="btn btn-success">Baixar</button>
+                            </div>
+                            <div style="padding-top: 10px">
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Fechar</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -388,99 +412,24 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Project Title</h2>
+                            <h2>Fitness Stores</h2>
                             <hr class="star-primary">
-                            <img src="img/portfolio/game.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/safe.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/submarine.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            <img src="img/portfolio/iWhey.png" class="img-responsive img-centered" alt="">
+                            <p>
+                            Fitness Stores é um aplicativo que se baseia em um e-commerce de produtos fitness. O aplicativo têm como objetivo agregar lojas do ramo fitness e proporcionar o cliente a comodidade de comprar seus produtos e suplementos no conforto da sua casa e com ofericimento de delivery e pagamento simplificado.
+                            <br>
+                            </br>
+                            <br>
+                            Desenvolvedores: Ramiro Lima, Roberto Carneiro, Adolpho Athyla, Aron Uchôa.
+                            </br>
+                            Designers: Karina Paula e Aron Uchôa.
+                            </p>
+                            <div>
+                            <button onclick="window.open('http://iwheyapp.com.br/stores/sign_in');" type="button" class="btn btn-danger">Em Breve</button>
+                            </div>
+                            <div style="padding-top: 10px">
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Fechar</button>
+                            </div>
                         </div>
                     </div>
                 </div>
