@@ -3,7 +3,7 @@ const popups = [
     title: "Warning",
     image_url: "warning-icon.png",
     message: [
-      "You can't run forever"
+      "Woops! What you want run here?"
     ],
     links: null,
     button_text: "Abort",
@@ -14,7 +14,6 @@ const popups = [
     title: "Error",
     image_url: "error-icon.png",
     message: [
-      "Control panel not found.",
       "Nevermind. Control is an illusion."
     ],
     links: null,
@@ -51,15 +50,15 @@ const popups = [
     links: [
       {
         text: 'Github',
-        url: 'http://github.com/amymc'
+        url: 'https://github.com/ramirolvn'
       },
-      {
-        text: 'LinkedIn',
-        url: 'http://www.linkedin.com/in/mccarthyamy'
-      },
+      // {
+      //   text: 'LinkedIn',
+      //   url: 'http://www.linkedin.com/in/mccarthyamy'
+      // },
       {
         text: 'Email',
-        url: 'mailto:amy.mccarthy2@mail.dcu.ie?subject=hello amy'
+        url: 'mailto:ramirolvn@gmail.com?subject=From Github Site'
       }
     ],
     isOpen: false,

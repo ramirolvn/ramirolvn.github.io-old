@@ -9,14 +9,14 @@ const menuItems = [
     popup: null,
     items: [
       {
-        title: "Random shit",
+        title: "Currículo PDF",
         image_url: "random-icon.png",
         onClick: true,
         onMouseOut: false,
         onMouseOver: false,
         isSubmenu: true,
         popup: {
-            title: "Random shit"
+            title: "Currículo PDF"
           },
         items: null
       }
