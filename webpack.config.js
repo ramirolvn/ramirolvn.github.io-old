@@ -1,54 +1,91 @@
-/* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
+var path = require('path');
 var webpack = require('webpack');
+var merge = require('merge');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-module.exports = {
-  context: __dirname,
-  entry: './src/index.js',
-  devtool: 'source-map',
+var webpackConfig = {
   output: {
-    path: `${__dirname}/build`,
+    path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/build',
-  },
-  module: {
-    loaders: [
-      {
-        test: /\.scss$/,
-        loaders: ['style', 'css', 'sass']
-      },
-      {
-        test: /\.jsx?$/, 
-        exclude: /node_modules/,
-        loader: 'babel'
-      },
-      { test: /\.(png|jpg)$/, 
-        include:  [/os-icons/],
-        loader: 'url-loader?name=/src/assets/os-icons/[name].[ext]' },
-      {
-        test: /\.(jpg|png|gif|svg)$/i,
-        exclude:  [/os-icons/],
-        loaders: [
-          'file?hash=sha512&digest=hex&name=/assets/[hash].[ext]',
-          'image-webpack?optimizationLevel=7&interlaced=false'
-        ]
-      }
-    ],
-  },
-  stats: {
-    warnings: false
-  },
-  resolve: {
-    extensions: ['', '.js', '.jsx'] 
+    publicPath: '/static/'
   },
   plugins: [
-    new webpack.DefinePlugin({
-      'process.env': {
-        'NODE_ENV': JSON.stringify('production')
-      }
-    }),
-
-    new webpack.optimize.DedupePlugin(), //dedupe similar code 
-    new webpack.optimize.UglifyJsPlugin(), //minify everything
-    new webpack.optimize.AggressiveMergingPlugin()//Merge chunks 
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.NoErrorsPlugin()
   ]
 };
+
+if (process.env.NODE_ENV === 'production') {
+
+  webpackConfig = merge(webpackConfig,{
+    devtool: "source-map",
+    entry : [
+      './src/client/index.js'
+    ],
+    module: {
+      loaders: [{
+        test: /\.js$/,
+        loader: 'babel',
+        exclude: /node_modules/,
+        include: __dirname
+      },
+      { test: /\.(png|jpg|gif|jpeg)$/, loader: 'url-loader?limit=8192'},
+      { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap') }
+    ]},
+    plugins : [
+      new webpack.DefinePlugin({
+        'process.env': {
+          NODE_ENV: JSON.stringify('production')
+        }
+      }),
+      new ExtractTextPlugin("app.css"),
+      new webpack.optimize.UglifyJsPlugin({minimize: true})
+    ]  
+  });
+
+}else{
+
+  webpackConfig = merge(webpackConfig,{
+    devtool: 'inline-source-map',
+    module: {
+      loaders: [{
+        test: /\.js$/,
+        loader: 'babel',
+        exclude: /node_modules/,
+        include: __dirname,
+        query: {
+          optional: ['runtime'],
+          stage: 2,
+          env: {
+            development: {
+              plugins: [
+                'react-transform'
+              ],
+              extra: {
+                'react-transform': {
+                  transforms: [{
+                    transform:  'react-transform-hmr',
+                    imports: ['react'],
+                    locals:  ['module']
+                  }]
+                }
+              }
+            }
+          }
+        }
+      },
+      { test: /\.(png|jpg|gif|jpeg)$/, loader: 'url-loader?limit=8192'},
+      { test: /\.css$/, loader: 'style-loader!css-loader' }
+    ]},
+    entry : [
+      'webpack-hot-middleware/client',
+      './src/client/index.js'
+    ],
+    plugins : [
+      new webpack.HotModuleReplacementPlugin()
+    ]  
+  });
+  
+}
+
+module.exports = webpackConfig;
