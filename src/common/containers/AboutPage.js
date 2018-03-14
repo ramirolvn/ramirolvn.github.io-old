@@ -6,9 +6,6 @@ import * as AboutActions from '../actions/about';
 
 //Data that needs to be called before rendering the component
 //This is used for server side rending via the fetchComponentDataBeforeRending() method
-About.need = [
-  AboutActions.fetchRepos
-]
 
 function mapStateToProps(state) {
   const {

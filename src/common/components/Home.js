@@ -47,7 +47,8 @@ class Home extends Component {
 								<li><em><b>*</b>Redux</em></li>
 							</ul>
 						</li>
-						<li><em>PHP</em></li>
+						<li><em>HTML</em></li>
+						<li><em>CSS3</em></li>
 					</ul>
 				</div>
 
@@ -60,6 +61,7 @@ class Home extends Component {
 								<li><em><b>*</b>Express</em></li>
 							</ul>
 						</li>
+						<li><em>PHP</em></li>
 						<li><em>Firebase</em></li>
 						<li><em>MySQL</em></li>
 						<li><em>SQLite</em></li>

@@ -17,7 +17,7 @@ class About extends Component {
 
       	  <div className="about" align="center">
 
-      	  	<h3 >About Me</h3>
+      	  	<h3 >About Me a</h3>
 
       	  	<p>I have been developing mobile apps for over 4 years. Over the years, I have adopted, mastered and moved on from many languages, frameworks and architectures. I am currently focusing on Swift.</p> 
 
